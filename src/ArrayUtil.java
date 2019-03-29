@@ -11,8 +11,14 @@ public class ArrayUtil {
 	 * 	  				   discarded.
 	*/
 	public static void shiftArray(int[] arr, int num) 
-	{ /* to be implemented in part (a) */ 
-			
+	{ 
+		int temp1 = arr[0];
+		for (int i=0; i<arr.length-1; i++) {
+			int temp = arr[i+1];
+			arr[i+1] = temp1;
+			temp1 = temp;
+		}
+		arr[0] = num;
 	}
 	
 	// There may be methods that are not shown.
